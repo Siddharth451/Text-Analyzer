@@ -19,11 +19,10 @@ export default function Form(props) {
         setText(clearText);
     }
     const textaaCopy=()=>{
-        var copyText = document.getElementById("mybox");
+        var text = document.getElementById("mybox");
   /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
-  /* Alert the copied text */
+  text.select();
+  navigator.clipboard.writeText(text.value);
   props.showAlert("Text copied","success");
     }
     const removeText=()=>{
