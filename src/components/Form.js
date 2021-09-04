@@ -38,12 +38,13 @@ export default function Form(props) {
         <div className="mb-3">
             <textarea className="form-control" id="mybox" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==='light'?'white':'grey'}} rows="8"></textarea>
         </div>
+        <div class="d-grid gap-2 d-md-block">
         <button type="button" className="btn btn-secondary mx-2" onClick={changeToUppercase}>Convert to UpperCase</button>
         <button type="button" className="btn btn-secondary mx-2" onClick={changeToLowerrcase}>Convert to LowerCase</button>
         <button type="button" className="btn btn-secondary mx-2" onClick={clear}>Clear</button>
         <button type="button" className="btn btn-secondary mx-2" onClick={textaaCopy}>Copy</button>
         <button type="button" className="btn btn-secondary mx-2" onClick={removeText}>Remove Extra space</button>
-        
+        </div>
         
 
     </div>
