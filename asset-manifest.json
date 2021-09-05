@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/Text-Analyzer/static/js/main.774e735e.chunk.js",
-    "main.js.map": "/Text-Analyzer/static/js/main.774e735e.chunk.js.map",
+    "main.js": "/Text-Analyzer/static/js/main.ef16336d.chunk.js",
+    "main.js.map": "/Text-Analyzer/static/js/main.ef16336d.chunk.js.map",
     "runtime-main.js": "/Text-Analyzer/static/js/runtime-main.3e06c7a9.js",
     "runtime-main.js.map": "/Text-Analyzer/static/js/runtime-main.3e06c7a9.js.map",
     "static/js/2.99c22ad2.chunk.js": "/Text-Analyzer/static/js/2.99c22ad2.chunk.js",
@@ -14,6 +14,6 @@
   "entrypoints": [
     "static/js/runtime-main.3e06c7a9.js",
     "static/js/2.99c22ad2.chunk.js",
-    "static/js/main.774e735e.chunk.js"
+    "static/js/main.ef16336d.chunk.js"
   ]
 }
