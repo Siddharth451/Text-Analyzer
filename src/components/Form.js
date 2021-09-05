@@ -45,7 +45,7 @@ export default function Form(props) {
             <textarea className="form-control" id="mybox" value={text||transcript} onChange={handleOnChange} style={{backgroundColor:props.mode==='light'?'white':'grey'}} rows="8"></textarea>
         </div>
         <div class="d-grid gap-2 d-md-block">
-        <button type="button" className="btn btn-secondary mx-2" onClick={SpeechRecognition.startListening}>Speak</button>
+        <button type="button" className="btn btn-secondary mx-2" onClick={SpeechRecognition.startListening({continuous: true })}>Speak</button>
         <button type="button" className="btn btn-secondary mx-2" onClick={SpeechRecognition.stopListening}>Stop</button>
         <button type="button" className="btn btn-secondary mx-2" onClick={changeToUppercase}>Convert to UpperCase</button>
         <button type="button" className="btn btn-secondary mx-2" onClick={changeToLowerrcase}>Convert to LowerCase</button>
