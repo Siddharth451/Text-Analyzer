@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 export default function Form(props) {
     const changeToUppercase = ()=> {
         let newText=text.toUpperCase();
@@ -30,15 +30,18 @@ export default function Form(props) {
         setText(newText1.join(" "));
         props.showAlert(" Extra space removed","success");
     }
+    const { transcript } = useSpeechRecognition()
     const[text, setText] = useState('');
     return (
         <>
     <div className="container">
         <h1 style={{color:props.mode==='light'?'black':'white'}}>{props.heading}</h1>
         <div className="mb-3">
-            <textarea className="form-control" id="mybox" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==='light'?'white':'grey'}} rows="8"></textarea>
+            <textarea className="form-control" id="mybox" value={text||transcript} onChange={handleOnChange} style={{backgroundColor:props.mode==='light'?'white':'grey'}} rows="8"></textarea>
         </div>
         <div class="d-grid gap-2 d-md-block">
+        <button type="button" className="btn btn-secondary mx-2" onClick={SpeechRecognition.startListening}>Speak</button>
+        <button type="button" className="btn btn-secondary mx-2" onClick={SpeechRecognition.stopListening}>Stop</button>
         <button type="button" className="btn btn-secondary mx-2" onClick={changeToUppercase}>Convert to UpperCase</button>
         <button type="button" className="btn btn-secondary mx-2" onClick={changeToLowerrcase}>Convert to LowerCase</button>
         <button type="button" className="btn btn-secondary mx-2" onClick={clear}>Clear</button>

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
 import Form from './Form';
-import About from './About';
+//import About from './About';
 import Alert from './Alert';
+
 //import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 function App() {
