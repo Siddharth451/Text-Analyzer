@@ -10,6 +10,7 @@ export default function Form(props) {
         setText(event.target.value);
     }
     
+    
     const changeToLowerrcase=()=>{
         let small=text.toLowerCase()||transcript.toUpperCase();
         setText(small);
@@ -36,7 +37,8 @@ export default function Form(props) {
     const { transcript,resetTranscript} = useSpeechRecognition();
     //const { resetTranscript } = useSpeechRecognition();
     var content = JSON.stringify(transcript);
-    const[text, setText] = useState();
+    var[text, setText] = useState(transcript);
+   console.log(text+transcript);
     return (
         <>
     <div className="container">
